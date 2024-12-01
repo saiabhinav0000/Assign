@@ -16,8 +16,7 @@ jobs:
 
     - name: Authenticate Docker explicitly
       run: |
-        echo ${{ secrets.GCP_KEY }} | gcloud auth activate-service-account --key-file=-
-        gcloud auth configure-docker gcr.io
+        echo ${{ secrets.GCP_KEY }} | gcloud auth activate-service-account --key-file=-gcloud auth configure-docker  us-central1-docker.pkg.dev
 
     # Set up Google Cloud SDK
     - name: Set up Google Cloud SDK
